@@ -24,12 +24,10 @@ While the data is available at the link above, the data used for this project wa
 
 The data was downloaded during the week of Nov 16th, 2015.
 
-The run_analysis.R script which processes the data is also capable of automatically downloading and unzipping the UCI HAR data set.
-
 ### Data Used 
 The UCI data set contains a number of files, not all of which were used.  
 
-General information files:
+General information files for human consumption:
 
 * README.txt
 * feaatures_info.txt
@@ -58,11 +56,11 @@ None of the files in the directories "test/Intertial Signals" and "train/Inertia
 
 Column Info
 
-* activity (six activities)
+* activity (LAYING, SITTING, STANDING, WALKING, WALKING\_DOWNSTAIRS, WALKING\_UPSTAIRS )
 * subject (1 to 30)
 * Averaged signals:
     * A subset of 79 of the (renamed) original columns in the HAR dataset.  
-    * Row values are the mean value for computed over the corresonding subject and activity
+    * Row values are the mean value computed over the corresonding subject and activity.
     * In the variable listing below _XYZ_ indicates three variables one each for X, Y and Z.
     * See the README file for a description of the renaming process. 
 * Units:
@@ -72,9 +70,8 @@ Column Info
     * Jerk Signals are the derivative of acceleration in units of meters/second^3
     * GyroJerk signals are the second derivative of angular velocity in units of radians/second^3
 
-
-```
 VARIABLES
+```
 activity
 subject 
 
