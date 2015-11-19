@@ -66,11 +66,11 @@ Column Info
     * In the variable listing below _XYZ_ indicates three variables one each for X, Y and Z.
     * See the README file for a description of the renaming process. 
 * Units:
-    * The acceleration signals are in standard gravity units 'g' ($meters/second^2$) in the X,Y and Z directions
+    * The acceleration signals are in standard gravity units 'g' (meters/second^2) in the X,Y and Z directions
     * Body acceleration signals are obtained by subtracting the gravity from the total acceleration. 
-    * Gyro signals are the angular velocity in units of $radians/second$. 
-    * Jerk Signals are the derivative of acceleration in units of $meters/second^3$
-    * GyroJerk signals are the second derivative of angular velocity in units of $radians/second^3$
+    * Gyro signals are the angular velocity in units of radians/second. 
+    * Jerk Signals are the derivative of acceleration in units of meters/second^3
+    * GyroJerk signals are the second derivative of angular velocity in units of radians/second^3
 
 
 ```
