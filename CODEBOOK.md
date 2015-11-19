@@ -45,7 +45,7 @@ Information processed by the run_analysis.R script include:
 * test/X_test.txt --- 2947 rows
 * test/y_test.txt --- 2947 rows
 
-### Data Note Used 
+### Data Not Used 
 None of the files in the directories "test/Intertial Signals" and "train/Inertial Signals" were used in this project.
 
 
