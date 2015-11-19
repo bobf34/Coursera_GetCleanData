@@ -1,7 +1,15 @@
-setwd("/home/bobc/DataScience/GetCleanData/CourseProject")
+#############################################################################################
+# run_analysis.R
+#
+# A script for creating a tidy data set as required for the
+# Coursera "Getting and Cleaning Data" course
+#############################################################################################
+
+
 require(plyr)
 
-#download and unzip the original dataset and unzip
+###############  Download and unzip the original dataset and unzip ##########################
+
 url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 localFilename = "UCI_HAR_Dataset.zip"
 if (!file.exists(localFilename)){
@@ -20,6 +28,7 @@ if (file.exists(localFilename)) {
    stop("Error: Unable to find zip file")
 }
 
+############################## Create the merged dataset ####################################
 
 # set the working directory to the UCI dir created during the unzip
 setwd("./UCI HAR Dataset")
@@ -64,6 +73,8 @@ subject_test  <- read.table("test/subject_test.txt", col.names = "subject")
 subject = rbind(subject_train, subject_test)
 
 
+############################# Create the data subset ########################################
+
 # Extract the mean and std measurements keeping the descriptive activities column 
 # Note 1: Intentionally not including columns like 'angle(tBodyAccMean,gravity)'
 # Note 2: None of the duplicate features survive this nex step, so they don't need to be dealt with
@@ -78,16 +89,21 @@ meanStdColNames <- names(har.dataSet)[grep('(mean|std)',names(har.dataSet))]
 har.dataSet = subset(har.dataSet, select= c(meanStdColNames))
                  
 
-## From the data set in step 4, creates a second, independent tidy data set with the 
-## average of each variable for each activity and each subject.
+########################### Average by activity and subject #################################
 
 # Average each pairing of subject and activity
 tidyMean.dataSet <-aggregate(har.dataSet, by=list(activities,subject$subject),FUN=mean)
 
+
+##################### Take care of activity and subject columns #############################
+
 # Rename the columns created by aggregate
 tidyMean.dataSet <- plyr::rename(tidyMean.dataSet, replace=c("Group.1" = "activity", "Group.2" = "subject"))
-                                                      
-# The tidy data set is now complete.
+
+
+############################## Save the tidy data set #######################################
+
+# The tidy data set is now complete. Save it without row names
 setwd("../")
 write.csv(tidyMean.dataSet, file="tidyMean_DataSet.csv", row.names = FALSE)
 
