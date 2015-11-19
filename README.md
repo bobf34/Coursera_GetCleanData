@@ -78,7 +78,7 @@ The course instructions for step 5 were to take the data set in step 4 (i.e. _ha
 
 There are two possible ways to interpret this requirement:
 
-1. Average for each activity and _for_ each subject
+1. Average for each activity and _for_ each subject.
 2. Average for each activity-subject pair.
 
 Using feedback from one of the course TA's, the second interpretation was selected.
@@ -86,11 +86,10 @@ Using feedback from one of the course TA's, the second interpretation was select
 The processing steps to convert _har.dataSet_ into the tidy dataset _tidyMean.dataSet_ are:
 
 * Use the R function _aggregate()_  to compute the mean of each column by subject-activity pairings.  
-* Include columns to indicate the activity-subject pairing
-* Save the results into a text file without the row names (original variable names)
+* Include columns to indicate the activity-subject pairing.
+* Save the results into a text file without the row names.
 
 ## Tidy Dataset Output
-#### Files
 The _run_analysis.R_ script creates the following file in the script execution directory:
 
 * _tidyMean_DataSet.csv_ , a CSV text file that contains:

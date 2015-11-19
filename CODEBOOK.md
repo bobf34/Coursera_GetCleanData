@@ -1,6 +1,6 @@
 # Code Book
 
-## Overivew
+## Overview
 
 Data from a Human Activity Recognition (HAR) study was processed as required for the Johns Hopkins (Coursera) "Getting and Cleaning Data" course project. This document describes the data sources, and the resultant "tidy" data set.   
 
