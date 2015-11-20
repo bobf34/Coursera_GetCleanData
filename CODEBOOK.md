@@ -64,7 +64,7 @@ Column Info
     * In the variable listing below _XYZ_ indicates three variables one each for X, Y and Z.
     * See the README file for a description of the renaming process. 
 * Units:
-    * All of the time and frequency variables have been normalized and are therefore unitless
+    * The UCI-HAR features were normalized and so, unitless. This dataset, which computes the mean on those variables is therefore also unitless.
 
 VARIABLES
 ```
