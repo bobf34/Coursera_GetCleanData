@@ -13,7 +13,7 @@ The overall process involves these major tasks:
 * Processing the data subset into a new "tidy" dataset
 * Storing the results.
 
-_Read the CODEBOOK.md file for more information on the data_
+_Read the CodeBook.md file for more information on the data_
 
 ## File locations and other requirements
 

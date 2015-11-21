@@ -60,7 +60,7 @@ Column Info
 * subject (1 to 30)
 * Averaged signals:
     * A subset of 79 of the (renamed) original columns in the HAR dataset.  (See the README file for a description of the renaming process.) 
-    * Row values are the mean value computed over the corresonding subject and activity.
+    * Row values are the mean values for each variable computed over the corresonding subject and activity.
     * In the variable listing below _XYZ_ indicates three variables one each for X, Y and Z.
 * Units:
     * The time and frequency variables in this data set are unitless as they are the computed mean of unitless features within the UCI-HAR dataset (which are  normalized and bounded within [-1,1]).
