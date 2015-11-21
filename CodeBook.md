@@ -50,7 +50,7 @@ None of the files in the directories "test/Intertial Signals" and "train/Inertia
 ## Tidy Dataset
 #### Tidy Dataset Files
 
-* _tidyMean_DataSet.csv_ ---  a text file consisting of 180 observations over 81 variables (columns) with column names
+* _tidyMean_DataSet.txt_ ---  a space-separated text file consisting of 180 observations over 81 variables (columns) with column names
 
 #### Tidy Dataset Description
 
