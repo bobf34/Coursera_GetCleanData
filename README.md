@@ -92,8 +92,9 @@ The processing steps to convert _har.dataSet_ into the tidy dataset _tidyMean.da
 ## Tidy Dataset Output
 The _run_analysis.R_ script creates the following file in the script execution directory:
 
-* _tidyMean_DataSet.csv_ , a CSV text file that contains:
+* _tidyMean_DataSet.txt_ , a space-separated text file that contains:
     * 180 observations (rows)
     * 81 variables (columns)
     * Column names
-
+    
+By uncommenting one line, the file can also generate a csv file, which is easier to read in github.  A sample of this output is included in the github repository.
