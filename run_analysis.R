@@ -70,7 +70,7 @@ activities <- activity_labels$activityLabel[ activities]
 ## Read the train and test subject data and bind in the same order as for the data set
 subject_train <- read.table("train/subject_train.txt", col.names = "subject")
 subject_test  <- read.table("test/subject_test.txt", col.names = "subject")
-subject = rbind(subject_train, subject_test)
+subject = rbind(subject_train, subject_test)$subject
 
 
 ############################# Create the data subset ########################################
@@ -92,13 +92,17 @@ har.dataSet = subset(har.dataSet, select= c(meanStdColNames))
 ########################### Average by activity and subject #################################
 
 # Average each pairing of subject and activity
-tidyMean.dataSet <-aggregate(har.dataSet, by=list(activities,subject$subject),FUN=mean)
+tidyMean.dataSet <-aggregate(har.dataSet, by=list(activities,subject),FUN=mean)
 
 
 ##################### Take care of activity and subject columns #############################
 
-# Rename the columns created by aggregate
+# Rename the tidy dataset columns created by aggregate
 tidyMean.dataSet <- plyr::rename(tidyMean.dataSet, replace=c("Group.1" = "activity", "Group.2" = "subject"))
+
+# Add the columns to the first dataset
+har.dataSet = cbind(subject, har.dataSet)
+har.dataSet = cbind(activities, har.dataSet)
 
 
 ############################## Save the tidy data set #######################################
@@ -106,5 +110,8 @@ tidyMean.dataSet <- plyr::rename(tidyMean.dataSet, replace=c("Group.1" = "activi
 # The tidy data set is now complete. Save it without row names
 setwd("../")
 write.csv(tidyMean.dataSet, file="tidyMean_DataSet.csv", row.names = FALSE)
+
+
+
 
 cat("All Done!")

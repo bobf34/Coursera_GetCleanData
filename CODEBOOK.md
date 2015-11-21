@@ -9,7 +9,7 @@ _Read the README.md file for information on the data processing._
 ## UCI HAR Data Set Information
 A database of acceleration and angular velocity data was collected for the purpose of training machine-learning models to recognize various human activities such as walking, sitting and laying.  The data was collected using inertial measurement units (IMU's) inside of a Samsung Galaxy SII cell phone.   More detailed information is available with the original data set which is stored on the UCI Machine Learning repository located at: [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
-The raw XYZ acceleration and angular velocity data was augmented with new variables. As an example, time-series data was converted into frequency-domain data and then further divided into various frequency bands.  Each dataset record contains the following:
+The raw XYZ acceleration and angular velocity data was augmented with new features. As an example, time-series data was converted into frequency-domain data and then further divided into various frequency bands.  Each dataset record contains the following:
 
 * Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 * Triaxial Angular velocity from the gyroscope.
@@ -59,10 +59,9 @@ Column Info
 * activity (LAYING, SITTING, STANDING, WALKING, WALKING\_DOWNSTAIRS, WALKING\_UPSTAIRS )
 * subject (1 to 30)
 * Averaged signals:
-    * A subset of 79 of the (renamed) original columns in the HAR dataset.  
+    * A subset of 79 of the (renamed) original columns in the HAR dataset.  (See the README file for a description of the renaming process.) 
     * Row values are the mean value computed over the corresonding subject and activity.
     * In the variable listing below _XYZ_ indicates three variables one each for X, Y and Z.
-    * See the README file for a description of the renaming process. 
 * Units:
     * The time and frequency variables in this data set are unitless as they are the computed mean of unitless features within the UCI-HAR dataset (which are  normalized and bounded within [-1,1]).
 
