@@ -109,7 +109,10 @@ har.dataSet = cbind(activities, har.dataSet)
 
 # The tidy data set is now complete. Save it without row names
 setwd("../")
-write.csv(tidyMean.dataSet, file="tidyMean_DataSet.csv", row.names = FALSE)
+write.table(tidyMean.dataSet, file="tidyMean_DataSet.txt", row.names = FALSE)
+
+# Uncomment the next line to create a csv verstio of the tidy dataset
+#write.csv(tidyMean.dataSet, file="tidyMean_DataSet.csv", row.names = FALSE)
 
 
 
